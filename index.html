@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>止まりマス</title>
+    <style>
+        p {
+            line-height: 180%
+        }
+
+        .head-title {
+            width: 100%;
+            background: #87ceeb;
+            color: #fff;
+            text-indent: 8px;
+            font-weight: 700;
+            line-height: 180%
+        }
+    </style>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script defer src="./gogo.js"></script>
+
+</head>
+
+<body>
+    <table class='cur_table'>
+        <caption>最寄りリスト</caption>
+        <thead>
+            <tr>
+                <th>種別</th>
+                <th>施設名</th>
+                <th>アイコン</th>
+                <th>距離</th>
+                <th>時間</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>CV</th>
+                <th>セブンイレブン藤沢北警察署前</th>
+                <th><img src="https://1.bp.blogspot.com/-5WJj_Fe-DRA/XexqKHYyWTI/AAAAAAABWd0/IfXLOzmiF0sQH1BeC1nvETFbDxtq-5USwCNcBGAsYHQ/s250/drink_bin_bottle_cola.png"
+                        height="25px">
+                    &nbsp;<img
+                        src="http://1.bp.blogspot.com/-8mR76GolAZA/Uku9cIOAttI/AAAAAAAAYik/WqqiEy_JEgs/s180-c/toilet_mark.png"
+                        height="25px">
+                </th>
+                <th>3km</th>
+                <th>10分</th>
+            </tr>
+            <tr>
+                <th>CV</th>
+                <th>セブンイレブン藤沢石川店</th>
+                <th><img src="https://1.bp.blogspot.com/-5WJj_Fe-DRA/XexqKHYyWTI/AAAAAAABWd0/IfXLOzmiF0sQH1BeC1nvETFbDxtq-5USwCNcBGAsYHQ/s250/drink_bin_bottle_cola.png"
+                        height="25px">
+                    &nbsp;<img
+                        src="http://1.bp.blogspot.com/-8mR76GolAZA/Uku9cIOAttI/AAAAAAAAYik/WqqiEy_JEgs/s180-c/toilet_mark.png"
+                        height="25px">
+                </th>
+                <th>1.6km</th>
+                <th>5分</th>
+            </tr>
+            <tr>
+                <th>CV</th>
+                <th>セブンイレブン藤沢慶応大学前店</th>
+                <th><img src="https://1.bp.blogspot.com/-5WJj_Fe-DRA/XexqKHYyWTI/AAAAAAABWd0/IfXLOzmiF0sQH1BeC1nvETFbDxtq-5USwCNcBGAsYHQ/s250/drink_bin_bottle_cola.png"
+                        height="25px">
+                    &nbsp;<img
+                        src="http://1.bp.blogspot.com/-8mR76GolAZA/Uku9cIOAttI/AAAAAAAAYik/WqqiEy_JEgs/s180-c/toilet_mark.png"
+                        height="25px">
+                </th>
+                <th>550m</th>
+                <th>2分</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <body>
+        <div class="head-title">Google Maps APIを使ったサンプル。</div>
+        <p>2点間のルート案内 マーカードラッグでルート情報が更新</p>
+        <div id="map" style="width:100%;height:300px"></div>
+        <div>
+            <button onclick="getPosition();">現在位置を確認</button>
+            <br /><br />
+            ★結果★<br />
+            <textarea id="addressOutput" rows="3" cols="26"></textarea>
+        </div>
+        <div>
+            <button onclick="initialize();">再検索</button>
+        </div>
+        <script
+            src="https://maps.google.com/maps/api/js?key=AIzaSyAkx5h7DhBRtllSSan_7DA1O59EOBvN4gA&callback=initialize&libraries=places,directions&language=ja"></script>
+
+    </body>
+
+</html>
